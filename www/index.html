@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<head>
+   <title>Betica Shop</title>
+   <meta charset="utf-8">
+   <meta name="author" content="JOHN RAYMUND NICONI">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <!-- CSS  -->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+   <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+   <link rel="stylesheet" type="text/css" href="/css/result-light.css" />
+   <link rel="stylesheet" type="text/css" href="css/custom.css" />
+   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+</head>
+<body>
+   <nav class="white" role="navigation">
+      <div class="nav-wrapper container">
+         <a href="#" id="sideMenuToggle" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+         <a id="logo-container" href="#" class="brand-logo">logo</a>
+         <ul class="right hide-on-med-and-down">
+            <li class="hidden"><a href="#">Navbar Link</a></li>
+            <li>
+               <div class="navbar-header cart">
+                  <button type="button" id="cartBig" class="navbar-toggle" data-toggle="collapse" data-target=".derma">
+                  <span class="sr-only">Toggle navigation</span>
+                  <i class="material-icons">shopping_cart</i>
+                  </button>
+               </div>
+               <div id="cartIn" class="collapse navbar-collapse derma">
+                  <ul class="nav navbar-nav cart-tbl">
+                     <!-- place dynamic links here -->
+                     <li class="dropdown menu-large">
+                        <a href="#" class="dropdown-toggle" id="dLabel" data-toggle="dropdown"><span class="glyphicon glyphicon-shopping-cart"></span> Basket <b class="caret"></b></a>
+                        <ul class="dropdown-menu megamenu">
+                           <div class="">
+                              <div class="simpleCart_items table-responsive">
+                                 <table class="table">
+                                    <th>
+                                    <tr>
+                                       <th class="item-name">Name</th>
+                                       <th class="item-price">Price</th>
+                                       <th class="item-quantity">Quantity</th>
+                                       <th class="item-remove"></th>
+                                    </tr>
+                                    </th>
+                                    <tbody>
+                                       <tr class="itemRow row-0 odd" id="cartItem_SCI-1">
+                                          <td class="item-name">Product 1</td>
+                                          <td class="item-price">$88.00</td>
+                                          <td class="item-quantity">1</td>
+                                          <td class="item-remove"><a href="javascript:;" class="simpleCart_remove">Remove</a></td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </div>
+                              <ul id="cart" class="clearfix"></ul>
+                              <li class="divider"></li>
+                              <div class="btn-group pull-right">
+                                 <a href="#" class="simpleCart_empty btn btn-lg btn-danger">Clear</a>
+                                 <a href="#" class="simpleCart_checkout btn btn-lg btn-success">Checkout</a>
+                              </div>
+                           </div>
+                        </ul>
+                     </li>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                     <a class="btn btn-sm btn-clear navbar-btn" style="margin-left:10px;" href="#">Sign in</a>
+                     <a class="btn btn-sm btn-clear navbar-btn" href="#">Sign up</a>
+                     <!--  <div class="btn-group ">
+                        <button class="btn btn-info navbar-btn btn-sm">En</button>
+                        <button class="btn dropdown-toggle navbar-btn btn-info btn-sm" data-toggle="dropdown">
+                        <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" style="min-width:30px;">
+                           <!-- dropdown menu links --
+                           <li><a href="">es</a></li>
+                           <li><a href="">en</a></li>
+                        </ul>
+                        </div>-->
+                  </ul>
+               </div>
+               <!-- /.navbar-collapse-->
+            </li>
+         </ul>
+      </div>
+      </li>
+      </ul>
+      <ul id="nav-mobile" class="side-nav">
+         <li><a href="#"  class="nav-title">Categories</a></li>
+      </ul>
+      <!-- <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>-->
+      </div>
+   </nav>
+   <nav class="navbar navbar-default hidden" role="navigation">
+   </nav>
+   <div id="index-banner" class="parallax-container hidden">
+      <div class="section no-pad-bot">
+         <div class="container">
+            <br><br>
+            <h1 class="header center teal-text text-lighten-2">Products</h1>
+            <div class="row center">
+               <TABLE border='1'>
+                  <tbody id='category_con'></tbody>
+               </TABLE>
+            </div>
+            <div class="row center">
+            </div>
+            <br><br>
+         </div>
+      </div>
+      <div class="parallax"><img src="background1.jpg" alt="Unsplashed background img 1"></div>
+   </div>
+   <di class="section">
+   <div id="product_con"  class="row">
+   </div>
+   <!-- end row -->
+   <ul id="shoppingbasket"></ul>
+   </div><!-- end container -->
+   <script>
+      // tell the embed parent frame the height of the content
+      if (window.parent && window.parent.parent){
+        window.parent.parent.postMessage(["resultsFrame", {
+          height: document.body.getBoundingClientRect().height,
+          slug: "None"
+        }], "*")
+      }
+   </script>
+   <!--   Icon Section   -->
+   <div class="row hidden" >
+      <div class="col s12 m4">
+         <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
+            <h5 class="center">Speeds up development</h5>
+            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+         </div>
+      </div>
+      <div class="col s12 m4">
+         <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+            <h5 class="center">User Experience Focused</h5>
+            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+         </div>
+      </div>
+      <div class="col s12 m4">
+         <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
+            <h5 class="center">Easy to work with</h5>
+            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+         </div>
+      </div>
+   </div>
+   </div>
+   </div>
+   <div class="parallax-container valign-wrapper hidden">
+      <div class="section no-pad-bot">
+         <div class="container">
+            <div class="row center">
+               <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+            </div>
+         </div>
+      </div>
+      <div class="parallax"><img src="background2.jpg" alt="Unsplashed background img 2"></div>
+   </div>
+   <div class="container hidden">
+      <div class="section">
+         <div class="row">
+            <div class="col s12 center">
+               <h3><i class="mdi-content-send brown-text"></i></h3>
+               <h4>Contact Us</h4>
+               <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="parallax-container valign-wrapper hidden">
+      <div class="section no-pad-bot">
+         <div class="container">
+            <div class="row center">
+               <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+            </div>
+         </div>
+      </div>
+      <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></div>
+   </div>
+   <footer class="page-footer teal">
+      <div class="container">
+         <div class="row">
+            <div class="col l6 s12">
+               <h5 class="white-text">Company Bio</h5>
+               <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+            </div>
+            <div class="col l3 s12">
+               <h5 class="white-text">Settings</h5>
+               <ul>
+                  <li><a class="white-text" href="#!">Link 1</a></li>
+                  <li><a class="white-text" href="#!">Link 2</a></li>
+                  <li><a class="white-text" href="#!">Link 3</a></li>
+                  <li><a class="white-text" href="#!">Link 4</a></li>
+               </ul>
+            </div>
+            <div class="col l3 s12">
+               <h5 class="white-text">Connect</h5>
+               <ul>
+                  <li><a class="white-text" href="#!">Link 1</a></li>
+                  <li><a class="white-text" href="#!">Link 2</a></li>
+                  <li><a class="white-text" href="#!">Link 3</a></li>
+                  <li><a class="white-text" href="#!">Link 4</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div class="footer-copyright">
+         <div class="container">
+           Prepared by: <a href="mailto:jraymund.niconi@gmail.com?Subject=Application%20Eaxam" target="_top">John Raymund Niconi</a>
+         </div>
+      </div>
+</p>
+   </footer>
+   <!--  Scripts-->
+   <script src="js/jquery-2.1.1.min.js"></script>
+   <script>
+   
+$('.dropdown-toggle').click(function(){
+$('.simpleCart_items table').addClass('table-bordered table');
+
+
+})
+   </script>
+   <script src="js/materialize.js"></script>
+   <script src="js/init.js"></script>
+   <script type="text/javascript" src="js/bootstrap.js"></script>
+   <script type="text/javascript" src="js/simpleCart.js"></script>
+   <script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>

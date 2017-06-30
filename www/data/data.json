@@ -1,0 +1,56 @@
+{
+        "items": {
+          "c001": {
+            "categoryName": "Phones"
+          },
+          "c002": {
+            "categoryName": "Laptops"
+          },
+          "c003": {
+            "categoryName": "Accessories"
+          },
+          "p001": {
+            "categoryId": "c001",
+            "manufacturer": "Apple",
+            "productName": "iPhone 10",
+            "productImage": "iPhone10.jpg",
+            "price": 499,
+            "releaseDate": "2018-04-23T18:25:43.511Z"
+          },
+          "p002": {
+            "categoryId": "c002",
+            "manufacturer": "Apple",
+            "productName": "Macbook Pro 2017",
+            "price": 1999,
+            "releaseDate": "2017-04-23T18:25:43.511Z"
+          },
+          "p003": {
+            "categoryId": "c002",
+            "manufacturer": "Dell",
+            "productName": "XPS 13",
+            "price": 1399,
+            "releaseDate": "2017-04-23T18:25:43.511Z"
+          },
+          "p004": {
+            "categoryId": "c001",
+            "manufacturer": "Samsung",
+            "productName": "Samsung Galaxy S10",
+            "price": 399,
+            "releaseDate": "2017-04-23T18:25:43.511Z"
+          },
+          "p005": {
+            "categoryId": "c003",
+            "manufacturer": "Apple",
+            "productName": "Apple Charger 12W",
+            "price": 99,
+            "releaseDate": "2016-12-23T18:25:43.511Z"
+          },
+          "p006": {
+            "categoryId": "c003",
+            "manufacturer": "Samsung",
+            "productName": "Samsung Charger 12W",
+            "price": 89,
+            "releaseDate": "2017-04-23T18:25:43.511Z"
+          }
+        }
+      }

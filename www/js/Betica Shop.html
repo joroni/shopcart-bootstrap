@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<!-- saved from url=(0025)http://192.168.1.6:3000/# -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>Betica Shop</title>
+   
+   <meta name="author" content="JOHN RAYMUND NICONI">
+   
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- CSS  -->
+   <link href="./Betica Shop_files/icon" rel="stylesheet">
+   <link href="./Betica Shop_files/materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+   <link href="./Betica Shop_files/style.css" type="text/css" rel="stylesheet" media="screen,projection">
+   <link rel="stylesheet" type="text/css" href="./Betica Shop_files/normalize.css">
+   <link rel="stylesheet" type="text/css" href="./Betica Shop_files/result-light.css">
+   <link rel="stylesheet" type="text/css" href="./Betica Shop_files/custom.css">
+   <link rel="stylesheet" type="text/css" href="./Betica Shop_files/bootstrap.css">
+</head>
+<body style="">
+   <nav class="white" role="navigation">
+      <div class="nav-wrapper container">
+         <a href="http://192.168.1.6:3000/#" id="sideMenuToggle" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+         <a id="logo-container" href="http://192.168.1.6:3000/#" class="brand-logo">logo</a>
+         <ul class="right hide-on-med-and-down">
+            <li class="hidden"><a href="http://192.168.1.6:3000/#">Navbar Link</a></li>
+            <li>
+               <div class="navbar-header cart">
+                  <button type="button" id="cartBig" class="navbar-toggle" data-toggle="collapse" data-target=".derma">
+                  <span class="sr-only">Toggle navigation</span>
+                  <i class="material-icons">shopping_cart</i>
+                  </button>
+               </div>
+               <div id="cartIn" class="navbar-collapse derma in" style="height: auto;">
+                  <ul class="nav navbar-nav cart-tbl">
+                     <!-- place dynamic links here -->
+                     <li class="dropdown menu-large open">
+                        <a href="http://192.168.1.6:3000/#" class="dropdown-toggle" id="dLabel" data-toggle="dropdown"><span class="glyphicon glyphicon-shopping-cart"></span> Basket <b class="caret"></b></a>
+                        <ul class="dropdown-menu megamenu">
+                           <div class="">
+                              <div class="simpleCart_items table-responsive"> <table class="table-bordered table"><thead><tr class="headerRow"><th class="item-name">Name</th><th class="item-price">Price</th><th class="item-quantity">Quantity</th><th class="item-remove"></th></tr></thead><tbody><tr class="itemRow row-0 odd" id="cartItem_SCI-3"><td class="item-name">Samsung Charger 12W</td><td class="item-price">$89.00</td><td class="item-quantity">1</td><td class="item-remove"><a href="javascript:;" class="simpleCart_remove">Remove</a></td></tr><tr class="itemRow row-1 even" id="cartItem_SCI-4"><td class="item-name">iPhone 10</td><td class="item-price">$499.00</td><td class="item-quantity">2</td><td class="item-remove"><a href="javascript:;" class="simpleCart_remove">Remove</a></td></tr></tbody></table></div>
+                              <ul id="cart" class="clearfix"></ul>
+                              <li class="divider"></li>
+                              <div class="btn-group pull-right">
+                                 <a href="http://192.168.1.6:3000/#" class="simpleCart_empty btn btn-lg btn-danger">Clear</a>
+                                 <a href="http://192.168.1.6:3000/#" class="simpleCart_checkout btn btn-lg btn-success">Checkout</a>
+                              </div>
+                           </div>
+                        </ul>
+                     </li>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                     <a class="btn btn-sm btn-clear navbar-btn" style="margin-left:10px;" href="http://192.168.1.6:3000/#">Sign in</a>
+                     <a class="btn btn-sm btn-clear navbar-btn" href="http://192.168.1.6:3000/#">Sign up</a>
+                     <!--  <div class="btn-group ">
+                        <button class="btn btn-info navbar-btn btn-sm">En</button>
+                        <button class="btn dropdown-toggle navbar-btn btn-info btn-sm" data-toggle="dropdown">
+                        <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" style="min-width:30px;">
+                           <!-- dropdown menu links --
+                           <li><a href="">es</a></li>
+                           <li><a href="">en</a></li>
+                        </ul>
+                        </div>-->
+                  </ul>
+               </div>
+               <!-- /.navbar-collapse-->
+            </li>
+         </ul>
+      </div>
+      
+      
+      <ul id="nav-mobile" class="side-nav" style="transform: translateX(-100%);">
+         <li><a href="http://192.168.1.6:3000/#" class="nav-title">Categories</a></li>
+      <li><a href="http://192.168.1.6:3000/#" onclick="pages(this);" data-massage="Phones">Phones</a></li><li><a href="http://192.168.1.6:3000/#" onclick="pages(this);" data-massage="Laptops">Laptops</a></li><li><a href="http://192.168.1.6:3000/#" onclick="pages(this);" data-massage="Accessories">Accessories</a></li></ul>
+      <!-- <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>-->
+      
+   </nav>
+   <nav class="navbar navbar-default hidden" role="navigation">
+   </nav>
+   <div id="index-banner" class="parallax-container hidden">
+      <div class="section no-pad-bot">
+         <div class="container">
+            <br><br>
+            <h1 class="header center teal-text text-lighten-2">Products</h1>
+            <div class="row center">
+               <table border="1">
+                  <tbody id="category_con"></tbody>
+               </table>
+            </div>
+            <div class="row center">
+            </div>
+            <br><br>
+         </div>
+      </div>
+      <div class="parallax"><img src="./Betica Shop_files/background1.jpg" alt="Unsplashed background img 1" style="display: block;"></div>
+   </div>
+   <di class="section">
+   <div id="product_con" class="row"><div class="c001 col-md-3 simpleCart_shelfItem"><div class="panel panel-default"><div class="panel-heading item_name">iPhone 10</div><div class="panel-body"><img src="./Betica Shop_files/iPhone 10.jpg" class="img-thumbnail img-responsive item_thumb"><br><p class="input-sm clearfix">Manufacturer: <brand>Apple</brand></p><span class="row"></span></div><div class="panel-footer"><p class="item_price">$ 499</p><div class="col-sm-6"><label>Qty: <input class="item_Quantity form-control" type="text" value="1"></label></div><div class="col-sm-6"><span class="btn btn-success btn-md btn-full item_add">ADD</span></div><select name="size" id="size" class="item_size"><option value="#">120</option><option value="small"></option><option value="medium">Medium</option><option value="large">Large</option></select><p class="input-sm release clearfix">Release Date: 2018-04-23T18:25:43.511Z</p></div></div></div><div class="c001 col-md-3 simpleCart_shelfItem"><div class="panel panel-default"><div class="panel-heading item_name">Samsung Galaxy S10</div><div class="panel-body"><img src="./Betica Shop_files/Samsung Galaxy S10.jpg" class="img-thumbnail img-responsive item_thumb"><br><p class="input-sm clearfix">Manufacturer: <brand>Samsung</brand></p><span class="row"></span></div><div class="panel-footer"><p class="item_price">$ 399</p><div class="col-sm-6"><label>Qty: <input class="item_Quantity form-control" type="text" value="1"></label></div><div class="col-sm-6"><span class="btn btn-success btn-md btn-full item_add">ADD</span></div><select name="size" id="size" class="item_size"><option value="#">120</option><option value="small"></option><option value="medium">Medium</option><option value="large">Large</option></select><p class="input-sm release clearfix">Release Date: 2017-04-23T18:25:43.511Z</p></div></div></div></div>
+   <!-- end row -->
+   <ul id="shoppingbasket"></ul>
+   <!-- end container -->
+   <script>
+      // tell the embed parent frame the height of the content
+      if (window.parent && window.parent.parent){
+        window.parent.parent.postMessage(["resultsFrame", {
+          height: document.body.getBoundingClientRect().height,
+          slug: "None"
+        }], "*")
+      }
+   </script>
+   <!--   Icon Section   -->
+   <div class="row hidden">
+      <div class="col s12 m4">
+         <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
+            <h5 class="center">Speeds up development</h5>
+            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+         </div>
+      </div>
+      <div class="col s12 m4">
+         <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+            <h5 class="center">User Experience Focused</h5>
+            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+         </div>
+      </div>
+      <div class="col s12 m4">
+         <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
+            <h5 class="center">Easy to work with</h5>
+            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+         </div>
+      </div>
+   </div>
+   
+   
+   <div class="parallax-container valign-wrapper hidden">
+      <div class="section no-pad-bot">
+         <div class="container">
+            <div class="row center">
+               <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+            </div>
+         </div>
+      </div>
+      <div class="parallax"><img src="./Betica Shop_files/background2.jpg" alt="Unsplashed background img 2" style="display: block;"></div>
+   </div>
+   <div class="container hidden">
+      <div class="section">
+         <div class="row">
+            <div class="col s12 center">
+               <h3><i class="mdi-content-send brown-text"></i></h3>
+               <h4>Contact Us</h4>
+               <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="parallax-container valign-wrapper hidden">
+      <div class="section no-pad-bot">
+         <div class="container">
+            <div class="row center">
+               <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+            </div>
+         </div>
+      </div>
+      <div class="parallax"><img src="./Betica Shop_files/background3.jpg" alt="Unsplashed background img 3" style="display: block;"></div>
+   </div>
+   <footer class="page-footer teal">
+      <div class="container">
+         <div class="row">
+            <div class="col l6 s12">
+               <h5 class="white-text">Company Bio</h5>
+               <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+            </div>
+            <div class="col l3 s12">
+               <h5 class="white-text">Settings</h5>
+               <ul>
+                  <li><a class="white-text" href="http://192.168.1.6:3000/#!">Link 1</a></li>
+                  <li><a class="white-text" href="http://192.168.1.6:3000/#!">Link 2</a></li>
+                  <li><a class="white-text" href="http://192.168.1.6:3000/#!">Link 3</a></li>
+                  <li><a class="white-text" href="http://192.168.1.6:3000/#!">Link 4</a></li>
+               </ul>
+            </div>
+            <div class="col l3 s12">
+               <h5 class="white-text">Connect</h5>
+               <ul>
+                  <li><a class="white-text" href="http://192.168.1.6:3000/#!">Link 1</a></li>
+                  <li><a class="white-text" href="http://192.168.1.6:3000/#!">Link 2</a></li>
+                  <li><a class="white-text" href="http://192.168.1.6:3000/#!">Link 3</a></li>
+                  <li><a class="white-text" href="http://192.168.1.6:3000/#!">Link 4</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div class="footer-copyright">
+         <div class="container">
+           Prepared by: <a href="mailto:jraymund.niconi@gmail.com?Subject=Application%20Eaxam" target="_top">John Raymund Niconi</a>
+         </div>
+      </div>
+<p></p>
+   </footer>
+   <!--  Scripts-->
+   <script src="./Betica Shop_files/jquery-2.1.1.min.js"></script>
+   <script>
+   
+$('.dropdown-toggle').click(function(){
+$('.simpleCart_items table').addClass('table-bordered table');
+
+
+})
+   </script>
+   <script src="./Betica Shop_files/materialize.js"></script>
+   <script src="./Betica Shop_files/init.js"></script>
+   <script type="text/javascript" src="./Betica Shop_files/bootstrap.js"></script>
+   <script type="text/javascript" src="./Betica Shop_files/simpleCart.js"></script>
+   <script type="text/javascript" src="./Betica Shop_files/app.js"></script>
+<script type="text/javascript" src="./Betica Shop_files/socket.io.js"></script><script type="text/javascript">//
+// Reload the app if server detects local change
+//
+(function() {
+    var url = 'http://' + document.location.host + '/__api__/autoreload';
+
+    function postStatus() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('post', url, true);
+        xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+        xhr.onreadystatechange = function() {
+            if (this.readyState === 4 && /^[2]/.test(this.status)) {
+            }
+        };
+        xhr.send();
+    }
+
+    function checkForReload() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('get', url, true);
+        xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+        xhr.onreadystatechange = function() {
+            if (this.readyState === 4 && /^[2]/.test(this.status)) {
+                var response = JSON.parse(this.responseText);
+                if (response.content.outdated) {
+                    postStatus();
+                    window.location.reload();
+                }
+            }
+        };
+        xhr.send();
+    }
+
+    setInterval(checkForReload, 1000 * 3);
+})(window);
+</script>
+<script type="text/javascript">(function(window) {
+    var socket = io('http://' + document.location.host);
+
+    // Copy the functions to avoid stack overflow
+    var previousConsole = Object.assign({}, window.console);
+
+    // Overwrite these individually to preserve other log properties
+    window.console.log = function() {
+        if(previousConsole.log) {
+            previousConsole.log.apply(previousConsole, arguments);
+        }
+        socket.emit('console','log', Array.prototype.slice.call(arguments).join(' '));
+    };
+
+    window.console.warn = function() {
+        if(previousConsole.warn) {
+            previousConsole.warn.apply(previousConsole, arguments);
+        }
+        socket.emit('console','warn', Array.prototype.slice.call(arguments).join(' '));
+    };
+
+    window.console.error = function() {
+        if(previousConsole.error) {
+            previousConsole.error.apply(previousConsole, arguments);
+        }
+        socket.emit('console','error', Array.prototype.slice.call(arguments).join(' '));
+    };
+
+    window.console.assert = function(assertion) {
+        if(previousConsole.assert) {
+            previousConsole.assert.apply(previousConsole, arguments);
+        }
+        if(assertion) {
+            socket.emit('console','assert', Array.prototype.slice.call(arguments, 1).join(' '));
+        }
+    };
+})(window);
+</script>
+<script type="text/javascript">//
+// Proxy
+///
+// Intercept XHR calls that would violate single-origin policy.
+// These requests will be proxied through the server.
+//
+(function() {
+    var xhr = {};
+    xhr.open = XMLHttpRequest.prototype.open;
+
+    XMLHttpRequest.prototype.open = function(method, url) {
+        var parser = document.createElement('a');
+        parser.href = url;
+
+        // WP8 does not set hostname on some XHRs
+        if (!parser.hostname) {
+            parser.hostname = window.location.hostname;
+        }
+
+        // proxy the cross-origin request
+        if (!parser.hostname.match(window.location.hostname)) {
+            url = '/proxy/' + encodeURIComponent(url);
+        }
+
+        xhr.open.apply(this, arguments);
+    };
+})(window);
+</script>
+<script type="text/javascript">//
+// Push notification
+//
+(function() {
+    document.addEventListener('deviceready', function() {
+        var oldPushNotification;
+        if (window.PushNotification) {
+            oldPushNotification = window.PushNotification;
+            window.PushNotification.init = function(options) {
+                if (options.android) {
+                    options.android.senderID = "85075801930";
+                    options.android.icon = "pushicon";
+                    options.android.iconColor = "blue";
+                }
+                var pgdevPush = new oldPushNotification.PushNotification(options);
+                pgdevPush.on('registration', function(data) {
+                    console.log('Device Push ID: \n' + data.registrationId);
+                });
+                return pgdevPush;
+            };
+        }
+    });
+})(window);
+</script>
+
+</di><div class="hiddendiv common"></div><div class="drag-target" data-sidenav="nav-mobile" style="touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); left: 0px;"></div></body></html>
